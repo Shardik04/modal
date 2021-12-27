@@ -19,6 +19,7 @@ export const ModalOverlay = styled.div`
   transition: all 0.3s ease-in-out;
   overflow: auto;
   pointer-events: ${(props) => (props.isOpen ? 'visible' : 'none')};
+  z-index: 100;
 `;
 
 export const ModalContainer = styled.div`

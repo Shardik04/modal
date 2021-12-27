@@ -57,6 +57,7 @@ const Modal = forwardRef(
         isOpen={isOpen}
         onClick={onOutsideClick}
         role="dialog"
+        aria-modal="true"
         {...rest}
       >
         <ModalContainer
@@ -81,15 +82,25 @@ const Modal = forwardRef(
 export default Modal;
 
 Modal.propTypes = {
+  /** Expects child nodes for body */
   children: PropTypes.node,
+  /** unique identifier for modal */
   id: PropTypes.string,
+  /** className for modal */
   className: PropTypes.string,
+  /** Flag indicated the close of modal on outside click */
   canOutsideClickClose: PropTypes.bool,
+  /** Flag indicated the close of modal on "Esc" key */
   canEscapeKeyClose: PropTypes.bool,
+  /** Flag indicated the visibility of the modal */
   isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func,
+  /** The function will be called with "false" value so that the calling component can toggle the "isOpen" property */
+  onClose: PropTypes.func.isRequired,
+  /** width for modal */
   width: PropTypes.string,
+  /** height for modal */
   height: PropTypes.string,
+  /** title for modal header */
   title: PropTypes.string,
 };
 

@@ -18,6 +18,7 @@ export const ModalOverlay = styled.div`
   overflow: auto;
   pointer-events: ${(props) => (props.isOpen ? 'visible' : 'none')};
   padding-top: 100px;
+  z-index: 100;
 `;
 
 export const ModalContainer = styled.div`
