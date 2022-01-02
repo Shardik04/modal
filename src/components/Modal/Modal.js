@@ -49,6 +49,10 @@ const Modal = forwardRef(
       };
     }, []);
 
+    if (!isOpen) {
+      return null;
+    }
+
     return (
       <ModalOverlay
         ref={ref}

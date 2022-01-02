@@ -6,19 +6,19 @@ const AnimateTop = keyframes`
 `;
 
 export const ModalOverlay = styled.div`
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: ${(props) => (props.isOpen ? 'flex' : 'none')};
+  display: flex;
   align-items: center;
   justify-content: center;
-  opacity: ${(props) => (props.isOpen ? 1 : 0)};
+  opacity: 1;
   transition: all 0.3s ease-in-out;
   overflow: auto;
-  pointer-events: ${(props) => (props.isOpen ? 'visible' : 'none')};
+  pointer-events: visible;
   z-index: 100;
 `;
 
